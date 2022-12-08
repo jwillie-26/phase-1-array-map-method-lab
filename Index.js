@@ -13,13 +13,17 @@ const tutorials = [
     "what is JSONP?",
   ];
 
-  const titleCased = () => {
-    return tutorials.map(function (str) {
-      let newStr = str.split(" ");
-      return newStr.map(function (string) {
-        return string.replace(string[0], string[0].toUpperCase());
-      }).join(" ")
-    })
-  }
+ 
+const titleCased = () => {
+  return tutorials
+  //arr = tutorials.map(str =>  str.charAt(0).toUpperCase() + str + str.slice(1));
+  let tutor
+  let caps = tutorials.map(string => {
+    tutor = string.split(' ').map(str => str.charAt(0).toUpperCase() + str.slice(1))
+   return tutor.join(' ')})
+   //debugger
+    return caps
 
-  //Array prototype
+}
+
+console.log(titleCased())
